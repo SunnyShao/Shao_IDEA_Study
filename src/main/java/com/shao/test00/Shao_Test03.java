@@ -1,33 +1,33 @@
 package com.shao.test00;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.val;
+import lombok.var;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /**
- * @auther Shao
- * @data 2023/8/29 12:29:54
+ * @author Shao
+ * @date 2023/8/30 18:42
  * @description
  */
 
+@Data
+@Builder
 public class Shao_Test03 {
 
+    public String name;
+
+    public Integer age;
+
     public static void main(String[] args) {
-
-
-        List<Integer> list = new ArrayList<Integer>();
-
-        System.out.println("test -0 " + list == null);
-        System.out.println("test - 1 ");
-        //Test
-        int a= 0;
-        for (int i = 0; i < 10; i++) {
-            a++;
-        }
-        test();
-    }
-
-    public  static  void  test()
-    {
-        System.out.println("sddassa ");
+        val list1 = new ArrayList<Integer>();
+        list1.add(1);
+        System.out.println(list1);
+        var list2 = new ArrayList<Integer>();
+        list2.add(2);
+        list2.add(3);
+        System.out.println(list2);
     }
 }
